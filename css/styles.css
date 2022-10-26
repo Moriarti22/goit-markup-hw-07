@@ -648,7 +648,12 @@ footer {
 /* portfolio.html */
 /*  */
 
-.projects .button {
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.projects__button {
     padding: 6px 22px;
 
     font-family: inherit;
@@ -669,8 +674,8 @@ footer {
 }
 
 
-.projects .button:focus,
-.projects .button:hover {
+.projects__button:focus,
+.projects__button:hover {
     background-color: var(--accent-color);
     color: var(--white-color-text);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -678,8 +683,14 @@ footer {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.projects__filter {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    gap: 8px;
+}
 
-.projects .name-project {
+.projects__name {
     color: var(--primary-color-text);
 
     font-size: 18px;
@@ -690,25 +701,14 @@ footer {
     margin-bottom: 4px;
 }
 
-.projects {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.projects .type-project {
+.projects__type {
     color: var(--second-color);
     font-size: 16px;
     line-height: 1.87;
 }
 
-.projects .filter {
-    display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
-    gap: 8px;
-}
 
-.projects .date-project {
+.projects__data {
     border-left: 1px solid var(--border-filter);
     border-right: 1px solid var(--border-filter);
     border-bottom: 1px solid var(--border-filter);
@@ -718,39 +718,39 @@ footer {
     padding-bottom: 20px;
 }
 
-.projects .link {
+.projects__link {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-.projects .link:hover,
-.projects .link:focus {
+.projects__link:hover,
+.projects__link:focus {
     box-shadow: 0px 1px 1px
     rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects .list {
+.projects__list {
     display: flex;
     flex-wrap: wrap;
     margin-top: -30px;
     margin-left: -30px;
 }
 
-.projects .item {
+.projects__item {
     display: flex;
     flex-basis: calc(100% / 3 - 30px);
     margin-top: 30px;
     margin-left: 30px;
 }
 
-.projects .thumb {
+.projects__thumb {
     position: relative;
     overflow: hidden;
 }
 
-.text-project {
+.projects__text {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -765,10 +765,11 @@ footer {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects .link:hover .text-project,
-.projects .link:focus .text-project {
+.projects__link:hover .projects__text,
+.projects__link:focus .projects__text {
     transform: translateY(0%);
 }
+
 
 /* Modal */
 
@@ -863,6 +864,8 @@ footer {
 
 
 .modal__input {
+    font-size: 16px;
+    line-height: 1.5;
     margin: 0px;
     padding: 11px 12px 11px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -897,6 +900,8 @@ footer {
     height: 120px;
     margin: 0px;
     padding: 12px 16px;
+    font-size: 16px;
+    line-height: 1.5;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -923,6 +928,9 @@ footer {
 
 .modal__license-label {
     display: flex;
+    color: var(--second-color);
+    font-size: 14px;
+    line-height: 1.71;
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
@@ -930,33 +938,33 @@ footer {
     
 }
 
-.license-check label {
-    color: var(--second-color);
-    font-size: 14px;
-    line-height: 1.71;
+
+.visually-hidden:checked + .modal__icon-check {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
 }
 
-.license-check .input-check {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+.modal__icon-check {
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-color-text);
+    border-radius: 2px;
 }
 
 
-.link-license {
+
+.modal__link-license {
     position: relative;
     text-decoration: none;
     color: var(--accent-color);
 }
 
-.link-license::after {
+.modal__link-license::after {
     position: absolute;
     content: '';
     left: 0;
@@ -966,12 +974,12 @@ footer {
     background-color: var(--accent-color);
 }
 
-.button-modal {
+.modal__btn {
     display: flex;
     justify-content: center;
 }
 
-.button-modal button {
+.modal__submit {
     padding: 10px 52px;
     font-weight: 700;
     font-size: 16px;
@@ -985,24 +993,7 @@ footer {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-modal button:hover,
-.button-modal button:focus {
+.modal__submit:hover,
+.modal__submit:focus {
     background-color: var(--button-color-active);
-}
-
-.icon-check {
-    display: inline-block;
-    margin-right: 7px;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--primary-color-text);
-    border-radius: 2px;
-}
-
-.input-check:checked + .icon-check {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    background-image: url(../images/icon-check.svg);
-    background-size: contain;
-    background-origin: border-box;
 }
