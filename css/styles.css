@@ -512,15 +512,15 @@ footer {
     color: var(--white-color-text);
 }
 
-.left-footer .item + .item {
-    margin-top: 9px;
-}
-
-.address-company {
+.footer-bottom__item {
     width: 231px;
 }
 
-.address-company .link {
+.footer-bottom__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer-bottom__link {
     color: var(--addres-footer);
     font-style: normal;
     font-size: 14px;
@@ -530,23 +530,16 @@ footer {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-company .map {
-    color: var(--white-color-text);
-}
-
-.address-company .link:hover,
-.address-company .link:focus {
+.footer-bottom__link:hover,
+.footer-bottom__link:focus {
     color: var(--accent-color);
 }
 
-.join .title {
-    text-transform: uppercase;
+.footer-bottom__link--white {
     color: var(--white-color-text);
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.14;
 }
 
+/* section join */
 
 .join {
     display: flex;
@@ -556,31 +549,7 @@ footer {
     width: 206px;
 }
 
-.join .social-net {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    fill: var(--white-color-text);
-    background-color: var(--gradient-social);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-net:hover,
-.social-net:focus {
-    background-color: var(--accent-color);
-}
-
-.subscription {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.subscription .title {
+.join__title {
     text-transform: uppercase;
     color: var(--white-color-text);
     margin-bottom: 20px;
@@ -588,7 +557,26 @@ footer {
     line-height: 1.14;
 }
 
-.subscription input {
+.list-social__link--background {
+    background-color: var(--gradient-social);
+}
+
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subscription__title {
+    text-transform: uppercase;
+    color: var(--white-color-text);
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+}
+
+.subscription__input {
     width: 358px;
     height: 50px;
     margin: 0px;
@@ -602,39 +590,32 @@ footer {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscription input::placeholder {
+.subscription__input::placeholder {
     font-size: 16px;
     line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--addres-footer);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscription input:hover,
-.subscription input:focus {
+.subscription__input:hover,
+.subscription__input:focus {
     border-color: var(--accent-color);
 }
 
-.subscription input:hover::placeholder,
-.subscription input:focus::placeholder {
+.subscription__input:hover::placeholder,
+.subscription__input:focus::placeholder {
     color: var(--accent-color);
 }
 
-.subscription .mail-label {
+.subscription__label {
     margin-right: 12px;
 }
 
-.send-email {
+.subscription__send {
     display: flex;
 }
 
-.subscription input::placeholder {
-    color: var(--addres-footer);
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-}
-
-.subscription .btn-send {
+.btn-send {
     display: flex;
     width: 200px;
     height: 50px;
@@ -653,12 +634,12 @@ footer {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscription .title-send {
+.btn-send__text {
     margin-right: 10px;
 }
 
-.subscription .btn-send:hover,
-.subscription .btn-send:focus {
+.btn-send:hover,
+.btn-send:focus {
     background-color: var(--button-color-active);
 }
 
@@ -825,7 +806,7 @@ footer {
 }
 
 
-.modal-close {
+.modal__close {
     position: absolute;
     display: flex;
     top: 14px;
@@ -841,8 +822,8 @@ footer {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.modal__close:hover,
+.modal__close:focus {
     fill: var(--accent-color);
 }
 
@@ -852,7 +833,7 @@ footer {
     pointer-events: none;
 }
 
-.form-title {
+.modal__title {
     width: 100%;
     font-weight: 700;
     font-size: 20px;
@@ -861,17 +842,27 @@ footer {
     margin-bottom: 12px;
 }
 
-.form-field {
+.modal__field {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.form-field + .form-field {
-    margin-top: 10px;
+.modal__field:not(:last-child) {
+    margin-bottom: 10px;
 }
 
-.form-field .form-input {
+.modal__field:focus-within .modal__icon,
+.modal__field:hover .modal__icon {
+    fill: var(--accent-color);
+}
+
+.modal__field--margin {
+    margin-bottom: 20px;
+}
+
+
+.modal__input {
     margin: 0px;
     padding: 11px 12px 11px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -879,7 +870,7 @@ footer {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field .modal-icon {
+.modal__icon {
     position: absolute;
     bottom: 11px;
     left: 12px;
@@ -888,26 +879,21 @@ footer {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field .form-input:hover,
-.form-field .form-input:focus {
+.modal__input:hover,
+.modal__input:focus {
     border-color: var(--accent-color);
 }
 
-/* .form-field .form-input:focus + .modal-icon {
-    fill: var(--accent-color);
-} */
 
-.form-field:focus-within .modal-icon,
-.form-field:hover .modal-icon {
-    fill: var(--accent-color);
-}
-
-
-.form-field label {
+.modal__label {
     margin-bottom: 4px;
+    color: var(--second-color);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
 }
 
-.form-field textarea {
+.modal__textarea {
     height: 120px;
     margin: 0px;
     padding: 12px 16px;
@@ -917,7 +903,7 @@ footer {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field textarea::placeholder {
+.modal__textarea::placeholder {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -925,34 +911,23 @@ footer {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field textarea:hover::placeholder,
-.form-field textarea:focus::placeholder {
+.modal__textarea:hover::placeholder,
+.modal__textarea:focus::placeholder {
     color: var(--accent-color);
 }
 
-.form-field textarea:hover,
-.form-field textarea:focus {
+.modal__textarea:hover,
+.modal__textarea:focus {
     border-color: var(--accent-color);
 }
 
-.form-comment {
-    margin-bottom: 20px;
-}
-
-.license-label {
+.modal__license-label {
     display: flex;
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     
-}
-
-.form-field label {
-    color: var(--second-color);
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
 }
 
 .license-check label {
