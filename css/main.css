@@ -32,7 +32,6 @@ body {
   background-color: var(--background-color);
   color: var(--primary-color-text);
   font-family: Roboto, sans-serif;
-  letter-spacing: 0.03em;
 }
 
 h1,
@@ -92,18 +91,23 @@ img {
 
 .logo {
   display: block;
-  color: var(--color-logo-black);
-  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  color: var(--color-logo-black);
+  font-family: Raleway, sans-serif;
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
 .logo--blue {
   color: var(--accent-color);
+}
+
+.logo__footer--white {
+  margin-bottom: 20px;
+  color: var(--white-color-text);
 }
 
 .list-social {
@@ -185,6 +189,7 @@ img {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -228,10 +233,10 @@ img {
 
 .modal__label {
   margin-bottom: 4px;
-  color: var(--second-color);
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
+  color: var(--second-color);
 }
 
 .modal__textarea {
@@ -281,9 +286,10 @@ img {
 
 .modal__license-label {
   display: flex;
-  color: var(--second-color);
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
@@ -365,11 +371,11 @@ header {
   padding-top: 32px;
   padding-bottom: 32px;
   background-color: var(--white-color-text);
-  color: var(--primary-color-text);
-  font-size: 14px;
   font-weight: 500;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--primary-color-text);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav__link:focus, .site-nav__link:hover {
@@ -412,11 +418,11 @@ header {
   padding-top: 31px;
   padding-bottom: 31px;
   background-color: var(--white-color-text);
-  color: var(--second-color);
-  font-size: 14px;
   font-weight: 500;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--second-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__link:focus, .contact__link:hover {
@@ -451,11 +457,11 @@ header {
   margin-bottom: 30px;
   max-width: 696px;
   text-transform: uppercase;
-  color: var(--white-color-text);
-  font-size: 44px;
   font-weight: 900;
+  font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  color: var(--white-color-text);
 }
 
 .hero__button {
@@ -465,8 +471,8 @@ header {
   font-family: inherit;
   border-radius: 4px;
   border-color: transparent;
-  font-size: 16px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   padding: 10px 32px;
@@ -484,9 +490,10 @@ header {
 
 .feature-list__title {
   text-transform: uppercase;
-  font-size: 14px;
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
 
@@ -494,6 +501,7 @@ header {
   color: var(--second-color);
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .feature-list__item {
@@ -520,9 +528,10 @@ header {
 .section-work__title {
   margin-bottom: 50px;
   text-align: center;
-  font-size: 36px;
   font-weight: 700;
+  font-size: 36px;
   line-height: 1.16;
+  letter-spacing: 0.03em;
 }
 
 .section-work__list {
@@ -560,9 +569,10 @@ header {
 .our-team__title {
   margin-bottom: 50px;
   text-align: center;
-  font-size: 36px;
   font-weight: 700;
+  font-size: 36px;
   line-height: 1.16;
+  letter-spacing: 0.03em;
 }
 
 .our-team__item {
@@ -581,15 +591,17 @@ header {
 
 .our-team__team {
   margin-bottom: 10px;
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.18;
+  letter-spacing: 0.03em;
 }
 
 .our-team__profession {
   color: var(--second-color);
   font-size: 16px;
   line-height: 1.18;
+  letter-spacing: 0.03em;
   margin-bottom: 16px;
 }
 
@@ -606,9 +618,10 @@ header {
 .regular-clients__title {
   margin-bottom: 50px;
   text-align: center;
-  font-size: 36px;
   font-weight: 700;
+  font-size: 36px;
   line-height: 1.16;
+  letter-spacing: 0.03em;
 }
 
 .regular-clients__link {
@@ -652,11 +665,6 @@ footer {
   gap: 70px;
 }
 
-.logo__footer--white {
-  margin-bottom: 20px;
-  color: var(--white-color-text);
-}
-
 .footer-bottom__item {
   width: 231px;
 }
@@ -665,11 +673,11 @@ footer {
 }
 
 .footer-bottom__link {
-  color: var(--addres-footer);
-  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--addres-footer);
+  font-style: normal;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-bottom__link:hover, .footer-bottom__link:focus {
@@ -691,9 +699,10 @@ footer {
 .join__title {
   text-transform: uppercase;
   color: var(--white-color-text);
-  margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
 }
 
 .list-social__link--background {
@@ -708,10 +717,11 @@ footer {
 
 .subscription__title {
   text-transform: uppercase;
-  color: var(--white-color-text);
-  margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--white-color-text);
+  margin-bottom: 20px;
 }
 
 .subscription__input {
@@ -721,6 +731,7 @@ footer {
   padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: var(--white-color-text);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -730,6 +741,7 @@ footer {
 .subscription__input::-moz-placeholder {
   font-size: 16px;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: var(--addres-footer);
   -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -737,6 +749,7 @@ footer {
 .subscription__input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: var(--addres-footer);
   -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -744,6 +757,7 @@ footer {
 .subscription__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: var(--addres-footer);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -807,8 +821,8 @@ footer {
   border-radius: 4px;
   border-color: transparent;
   border: none;
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -827,11 +841,11 @@ footer {
 }
 
 .projects__name {
-  color: var(--primary-color-text);
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--primary-color-text);
   margin-bottom: 4px;
 }
 
@@ -839,6 +853,7 @@ footer {
   color: var(--second-color);
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.03em;
 }
 
 .projects__data {
@@ -883,10 +898,11 @@ footer {
   top: 0;
   left: 0;
   transform: translateY(100%);
-  color: var(--white-color-text);
-  background-color: var(--gradient-project);
   font-size: 18px;
   line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--white-color-text);
+  background-color: var(--gradient-project);
   padding: 63px 24px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
